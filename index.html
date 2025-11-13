@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DermaScan</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -12,24 +12,27 @@
 <body>
     <!-- top header -->
     <nav class="top-header">
-        <a href="" class="logo">
-            <img src="img/logo.png" alt="">
+        <a href="#" class="logo">
+            <img src="img/logo2.png" alt="Logo de Dermascan">
         </a>
         <ul>
-            <li><a href="">Inicio</a></li>
-            <li><a href="">Beneficios</a></li>
-            <li><a href="">Funcionalidades</a></li>
-            <li><a href="">Testimonios</a></li>
-            <li><a href="">Contacto</a></li>
-            <button>Descargar App</button>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#beneficios">Beneficios</a></li>
+            <li><a href="#funcionalidades">Funcionalidades</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
         </ul>
+        <div class="nav-button">
+            <button>Descargar App</button>
+        </div>
+
     </nav>
 
     <!-- Sección Inicio -->
-    <section>
-        <div class="inicio">
+    <section class="inicio" id="inicio">
+        <div class="container-inicio">
             <div class="texto-inicio">
-                <h1>Cuida tu piel a tiempo, con confianza y precisión</h1>
+                <h1>CUIDA TU PIEL A TIEMPO, CON CONFIENZA Y PRECISIÓN</h1>
                 <p>DermaScan te ayuda a monitorear tu piel de forma simple y confiable, manteniendo un registro de tus resultados y conectándote con especialistas cuando lo necesites.</p>
             </div>
             <div class="imagen-inicio">
@@ -39,8 +42,8 @@
     </section>
 
     <!-- Sección Beneficios-->
-    <section>
-        <div class="beneficios">
+    <section class="beneficios" id="beneficios">
+        <div class="container-beneficios">
             <h2>BENEFICIOS DE DERMASCAN</h2>
             <div class="lista-beneficios">
                 <div class="beneficio1">
@@ -62,8 +65,8 @@
         </div>
     
     <!-- Sección Funcionalidades -->
-    <section>
-        <div class="funcionalidades">
+    <section class="funcionalidades" id="funcionalidades">
+        <div class="container-funcionalidades">
             <h2>FUNCIONALIDADES DE DERMASCAN</h2>
             <p>DermaScan ofrece una variedad de herramientas para el cuidado de tu piel.</p>
             <div class="lista-funcionalidades">
@@ -86,8 +89,8 @@
     </section>
 
     <!-- Sección Testimonios -->
-    <section>
-        <div class="testimonios">
+    <section class="testimonios" id="testimonios">
+        <div class="container-testimonios">
             <h2>TESTIMONIOS</h2>
             <p>Vea que nuestros usuarios dicen de nosotros.</p>
             <div class="lista-testimonios">
@@ -113,10 +116,30 @@
     </section>
 
     <!-- Sección Contacto -->
-    <section>
-        <div class="contacto">
-            <h2>CONTÁCTANOS</h2>
+    <section class="contacto" id="contacto">
+        <h2>CONTÁCTANOS</h2>
+        <div class="container-contacto">
+            <img src="img/contacto.png" alt="">    
+            <div class="contact-form">
+            <form action="#"> <div class="form-group">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre_completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div> 
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="6"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+                </div>
+            </form>
+        </div>
         </div>
     </section>
+    <script src="script.js" defer></script>
 </body>
 </html>
