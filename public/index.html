@@ -10,23 +10,33 @@
     <link rel="manifest" href="favicon/site.webmanifest">
 </head>
 <body>
-    <!-- top header -->
-    <nav class="top-header">
-        <a href="#" class="logo">
-            <img src="assets/images/logo2.png" alt="Logo de Dermascan">
-        </a>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#beneficios">Beneficios</a></li>
-            <li><a href="#funcionalidades">Funcionalidades</a></li>
-            <li><a href="#testimonios">Testimonios</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-        <div class="nav-button">
-            <button>Descargar App</button>
-        </div>
+<!-- top header -->
+<nav class="top-header">
+    <a href="#" class="logo">
+        <img src="assets/images/logo2.png" alt="Logo de Dermascan">
+    </a>
+    <ul class="nav-links">
+        <li><a href="#inicio" class="active">Inicio</a></li>
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#funcionalidades">Funcionalidades</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#acerca-de-nosotros">Acerca de nosotros</a></li>
+        <li><a href="#nueva-experiencia-movil">Nueva Experiencia Móvil</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="nav-controls">
+        <button class="theme-toggle" title="Cambiar tema">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+        <button class="language-toggle" title="Cambiar idioma">
+            <img src="assets/images/flag-uk.png" alt="English" style="width: 24px; height: 16px;">
+        </button>
+        <a href="#nueva-experiencia-movil" class="nav-button">Descargar App</a>
+    </div>
+</nav>
 
-    </nav>
 
     <!-- Sección Inicio -->
     <section class="inicio" id="inicio">
@@ -63,7 +73,8 @@
                 </div>
             </div>
         </div>
-    
+    </section>
+
     <!-- Sección Funcionalidades -->
     <section class="funcionalidades" id="funcionalidades">
         <div class="container-funcionalidades">
@@ -86,33 +97,228 @@
                     <p>Evalúa la severidad de tu acné y obtén consejos para su tratamiento.</p>
                 </div>
             </div>
+        </div>
     </section>
 
     <!-- Sección Testimonios -->
     <section class="testimonios" id="testimonios">
         <div class="container-testimonios">
             <h2>TESTIMONIOS</h2>
-            <p>Vea que nuestros usuarios dicen de nosotros.</p>
+            <p>Vea lo que nuestros usuarios dicen de nosotros.</p>
             <div class="lista-testimonios">
-                <div class="testimonio1">
-                    <img src="assets/images/testimonio1.png" alt="">
-                    <h3>Sofía García</h3>
-                    <h4>hace 2 semanas</h4>
-                    <p>“DermaScan me ayudó a detectar un lunar sospechoso que resultó ser un melanoma en etapa temprana. Gracias a la app, pude recibir tratamiento a tiempo y salvar mi vida.”</p>
-
+                <div class="testimonio">
+                    <div class="testimonio-header">
+                        <img src="assets/images/testimonio1.png" alt="Sofía García" class="avatar">
+                        <div class="testimonio-info">
+                            <h3>Sofía García</h3>
+                            <h4>hace 2 semanas</h4>
+                        </div>
+                    </div>
+                    <p>"DermaScan me ayudó a detectar un lunar sospechoso que resultó ser un melanoma en etapa temprana. Gracias a la app, pude recibir tratamiento a tiempo y salvar mi vida."</p>
                 </div>
-                <div class="testimonio2">
-                    <img src="assets/images/testimonio2.png" alt="">
-                    <h3>Carlos Lopez</h3>
-                    <h4>hace 1 mes</h4>
+                <div class="testimonio">
+                    <div class="testimonio-header">
+                        <img src="assets/images/testimonio2.png" alt="Carlos Lopez" class="avatar">
+                        <div class="testimonio-info">
+                            <h3>Carlos Lopez</h3>
+                            <h4>hace 1 mes</h4>
+                        </div>
+                    </div>
                     <p>"La app es muy fácil de usar y los resultados son rápidos. Me ha ayudado a controlar mi acné y mejorar mi piel."</p>
                 </div>
-                <div class="testimonio3">
-                    <img src="assets/images/testimonio3.png" alt="">
-                    <h3>Ana Martinez</h3>
-                    <h4>hace 3 meses</h4>
-                    <p>"DermaScan es una herramienta indispensable para el cuidado de la piel, Me permite monitorear mis manchas y lunares de forma regular y estar tranquila."</p>
+                <div class="testimonio">
+                    <div class="testimonio-header">
+                        <img src="assets/images/testimonio3.png" alt="Ana Martinez" class="avatar">
+                        <div class="testimonio-info">
+                            <h3>Ana Martinez</h3>
+                            <h4>hace 3 meses</h4>
+                        </div>
+                    </div>
+                    <p>"DermaScan es una herramienta indispensable para el cuidado de la piel. Me permite monitorear mis manchas y lunares de forma regular y estar tranquila."</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Acerca de Nosotros -->
+    <section class="acerca-de-nosotros" id="acerca-de-nosotros">
+        <div class="container-acerca-de-nosotros">
+            <h2>ACERCA DE NOSOTROS</h2>
+            <h3>Nuestro equipo</h3>
+            <p>Seis aliados fundamentales que funcionan para el impulso de Dermascan</p>
+            <div class="lista-equipo">
+                <div class="miembro-equipo">
+                    <img src="assets/images/ayrton.JPG" alt="Briceño Llanos, Ayrton" class="foto-equipo">
+                    <h4>Briceño Llanos, Ayrton</h4>
+                    <p class="especialidad">Ingeniería de Software</p>
+                    <div class="social-links">
+                        <a href="#" title="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" title="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <circle cx="17.5" cy="6.5" r="1.5"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="miembro-equipo">
+                    <img src="assets/images/santiago.JPG" alt="Antúnez Mendoza, Santiago" class="foto-equipo">
+                    <h4>Antúnez Mendoza, Santiago</h4>
+                    <p class="especialidad">Ingeniería de Sistemas</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a6 6 0 0 0-6 6v3H7v4h2v8h4v-8h3l1-4h-4V8a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" title="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" title="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <circle cx="17.5" cy="6.5" r="1.5"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="miembro-equipo">
+                    <img src="assets/images/fernando.JPG" alt="Casallo Mamani, Fernando" class="foto-equipo">
+                    <h4>Casallo Mamani, Fernando</h4>
+                    <p class="especialidad">Ingeniería de Sistemas</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a6 6 0 0 0-6 6v3H7v4h2v8h4v-8h3l1-4h-4V8a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" title="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" title="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <circle cx="17.5" cy="6.5" r="1.5"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="miembro-equipo">
+                    <img src="assets/images/josé.JPG" alt="Cueto Mendez, José" class="foto-equipo">
+                    <h4>Cueto Mendez, José</h4>
+                    <p class="especialidad">Ingeniería de Software</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a6 6 0 0 0-6 6v3H7v4h2v8h4v-8h3l1-4h-4V8a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" title="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" title="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <circle cx="17.5" cy="6.5" r="1.5"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="miembro-equipo">
+                    <img src="assets/images/Luis.JPG" alt="Yuryilca Rivera, Luis" class="foto-equipo">
+                    <h4>Yuryilca Rivera, Luis</h4>
+                    <p class="especialidad">Ingeniería de Sistemas</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a6 6 0 0 0-6 6v3H7v4h2v8h4v-8h3l1-4h-4V8a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" title="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" title="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <circle cx="17.5" cy="6.5" r="1.5"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="miembro-equipo">
+                    <img src="assets/images/gabriela.JPG" alt="Gonzales Estrada, Gabriela" class="foto-equipo">
+                    <h4>Gonzales Estrada, Gabriela</h4>
+                    <p class="especialidad">Ingeniería de Sistemas</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a6 6 0 0 0-6 6v3H7v4h2v8h4v-8h3l1-4h-4V8a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" title="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" title="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <circle cx="17.5" cy="6.5" r="1.5"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Tu Nueva Experiencia Móvil (agregada después de Acerca de Nosotros) -->
+    <section class="nueva-experiencia-movil" id="nueva-experiencia-movil">
+        <div class="container-nueva-experiencia">
+            <div class="contenido-experiencia">
+                <h2>TU NUEVA<br>EXPERIENCIA<br>MÓVIL</h2>
+                <p>Descubre todo lo que ofrece la nueva herramienta móvil que ofrece Dermascan.</p>
+                <div class="botones-descarga">
+                    <!-- Agregado texto + imagen del logo de App Store -->
+                    <a href="#" class="btn-app-store">
+                        <img src="assets/images/simple-icons_appstore.png" alt="Logo App Store" class="logo-app-store">
+                        <div class="btn-texto">
+                            <span class="texto-pequeno">Descarga la aplicación en</span>
+                            <span class="texto-grande">App Store</span>
+                        </div>
+                    </a>
+                    <!-- Agregado texto + imagen del logo de Google Play -->
+                    <a href="#" class="btn-google-play">
+                        <img src="assets/images/mage_playstore.png" alt="Logo Google Play" class="logo-google-play">
+                        <div class="btn-texto">
+                            <span class="texto-pequeno">Descarga la aplicación en</span>
+                            <span class="texto-grande">Google Play</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="imagen-experiencia">
+                <img src="assets/images/androidiOS.jpg" alt="Mockup de teléfonos con la app DermaScan">
+            </div>
+        </div>
     </section>
 
     <!-- Sección Contacto -->
@@ -140,6 +346,70 @@
         </div>
         </div>
     </section>
+
+    <!--Footer-->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top">
+                <!-- Compañía Section -->
+                <div class="footer-column">
+                    <h3>Compañía</h3>
+                    <ul>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#product">Product</a></li>
+                        <li><a href="#privacidad">Política de privacidad</a></li>
+                        <li><a href="#instituciones">Instituciones afiliadas</a></li>
+                    </ul>
+                </div>
+
+                <!-- Ayuda Section -->
+                <div class="footer-column">
+                    <h3>Ayuda</h3>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#progreso">Progreso</a></li>
+                        <li><a href="#asesores">Asesores</a></li>
+                        <li><a href="#pago">Opciones de pago</a></li>
+                    </ul>
+                </div>
+
+                <!-- Comunidad Section -->
+                <div class="footer-column">
+                    <h3>Comunidad</h3>
+                    <ul>
+                        <li><a href="#historia">Nuestra historia</a></li>
+                        <li><a href="#desarrolladores">Desarrolladores</a></li>
+                        <li><a href="#eventos">Eventos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Síguenos Section -->
+                <div class="footer-column">
+                    <h3>Síguenos</h3>
+                    <div class="social-icons flex-center">
+                        <a href="#facebook" title="Facebook">
+                            <img src="assets/images/facebook-icon.jpg" alt="Facebook">
+                        </a>
+                        <a href="#twitter" title="Twitter">
+                            <img src="assets/images/twitter-icon.jpg" alt="Twitter">
+                        </a>
+                        <a href="#instagram" title="Instagram">
+                            <img src="assets/images/instagram-icon.jpg" alt="Instagram">
+                        </a>
+                        <a href="#youtube" title="YouTube">
+                            <img src="assets/images/youtube-icon.jpg" alt="YouTube">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-brand">Dermascan</div>
+                <div class="footer-copyright">©2025 Dermascan. Todos los derechos reservados</div>
+            </div>
+        </div>
+    </footer>
     <script src="assets/scripts/main.js" defer></script>
 </body>
 </html>
