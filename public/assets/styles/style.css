@@ -574,6 +574,170 @@ section[id] {
     }
 }
 
+/* Sección Descarga de App */
+.descarga-app {
+    background-color: var(--color-blanco);
+    padding: 80px 0;
+}
+
+.container-descarga-app {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.contenido-descarga {
+    flex: 1;
+}
+
+.contenido-descarga h2 {
+    font-family: var(--font-titulo);
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--color-texto-oscuro);
+    line-height: 1.2;
+    margin-bottom: 20px;
+    max-width: 400px;
+}
+
+.contenido-descarga h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-principal);
+    margin-top: 20px;
+    border-radius: 2px;
+}
+
+.contenido-descarga > p {
+    font-family: var(--font-texto);
+    font-size: 1.1rem;
+    color: var(--color-texto-claro);
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 380px;
+}
+
+.botones-descarga {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-app-store,
+.btn-google-play {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: fit-content;
+    border: 2px solid #000;
+}
+
+.btn-app-store:hover,
+.btn-google-play:hover {
+    background-color: #333;
+}
+
+.logo-app-store,
+.logo-google-play {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.btn-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn-texto .texto-pequeno {
+    font-size: 11px;
+    opacity: 0.9;
+    font-family: var(--font-texto);
+}
+
+.btn-texto .texto-grande {
+    font-size: 15px;
+    font-weight: 600;
+    font-family: var(--font-titulo);
+}
+
+@media (max-width: 768px) {
+    .botones-descarga {
+        gap: 12px;
+    }
+    
+    .btn-app-store,
+    .btn-google-play {
+        padding: 10px 15px;
+    }
+
+    .btn-texto .texto-pequeno {
+        font-size: 10px;
+    }
+
+    .btn-texto .texto-grande {
+        font-size: 14px;
+    }
+}
+
+.imagen-moviles {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-moviles img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+}
+
+/* Responsive Design para sección descarga */
+@media (max-width: 1024px) {
+    .container-descarga-app {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .contenido-descarga h2 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-descarga-app {
+        padding: 0 20px;
+    }
+
+    .contenido-descarga h2 {
+        font-size: 28px;
+    }
+
+    .contenido-descarga > p {
+        font-size: 1rem;
+    }
+
+    .boton-tienda {
+        max-width: 100%;
+        padding: 15px 20px;
+    }
+}
+
 /*footer*/
 
 footer {
@@ -701,5 +865,178 @@ footer {
 
     footer {
         padding: 40px 20px 20px;
+    }
+}
+
+/* Estilos para la sección Tu Nueva Experiencia Móvil */
+.nueva-experiencia-movil {
+    background-color: #f8f8f8;
+    padding: 80px 0;
+}
+
+.container-nueva-experiencia {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 90%;
+}
+
+.contenido-experiencia h2 {
+    font-family: var(--font-titulo);
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--color-texto-oscuro);
+    margin-bottom: 30px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.contenido-experiencia h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-principal);
+    margin-top: 15px;
+    border-radius: 2px;
+}
+
+.contenido-experiencia p {
+    font-family: var(--font-texto);
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 400px;
+    line-height: 1.6;
+}
+
+.botones-descarga {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-app-store,
+.btn-google-play {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: fit-content;
+    border: 2px solid #000;
+}
+
+.btn-app-store:hover,
+.btn-google-play:hover {
+    background-color: #333;
+}
+
+.logo-app-store,
+.logo-google-play {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.btn-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn-texto .texto-pequeno {
+    font-size: 11px;
+    opacity: 0.9;
+    font-family: var(--font-texto);
+}
+
+.btn-texto .texto-grande {
+    font-size: 15px;
+    font-weight: 600;
+    font-family: var(--font-titulo);
+}
+
+@media (max-width: 768px) {
+    .botones-descarga {
+        gap: 12px;
+    }
+    
+    .btn-app-store,
+    .btn-google-play {
+        padding: 10px 15px;
+    }
+
+    .btn-texto .texto-pequeno {
+        font-size: 10px;
+    }
+
+    .btn-texto .texto-grande {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container-nueva-experiencia {
+        gap: 40px;
+    }
+
+    .contenido-experiencia h2 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-nueva-experiencia {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .contenido-experiencia h2 {
+        font-size: 32px;
+    }
+
+    .contenido-experiencia p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .botones-descarga {
+        align-items: center;
+    }
+
+    .btn-app-store,
+    .btn-google-play {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nueva-experiencia-movil {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenido-experiencia h2 {
+        font-size: 24px;
+    }
+
+    .contenido-experiencia p {
+        font-size: 14px;
+    }
+
+    .btn-app-store,
+    .btn-google-play {
+        padding: 12px 16px;
+        font-size: 14px;
     }
 }
