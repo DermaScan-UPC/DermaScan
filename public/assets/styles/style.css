@@ -144,13 +144,15 @@ body {
     color: var(--color-principal);
 }
 
-.actions {
+/* Container for toggles & download btn inside nav-links */
+.nav-actions-container {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-left: 10px;
 }
 
-.actions button, .actions .btn-download {
+.nav-actions-container button, .nav-actions-container .btn-download {
     background: none;
     border: 1px solid var(--color-texto-oscuro);
     color: var(--color-texto-oscuro);
@@ -254,6 +256,15 @@ h2 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-success {
+    background-color: #27AE60 !important;
+}
+.btn-loading {
+    opacity: 0.7;
+    cursor: wait !important;
 }
 
 /* Como Funciona */
@@ -367,7 +378,7 @@ h2 {
     transform: translateY(-5px);
 }
 
-/* --- Mobile Experience --- */
+/* Mobile Experience */
 .mobile-experience {
     background-color: var(--color-blanco);
 }
@@ -409,7 +420,6 @@ body.dark-mode .divider {
     line-height: 1.4;
 }
 
-/* Contenedor de botones */
 .store-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -417,7 +427,6 @@ body.dark-mode .divider {
     align-items: flex-start;
 }
 
-/* Estilo del botón de tienda (Bloque Negro) */
 .store-btn {
     display: flex;
     align-items: center;
@@ -464,7 +473,6 @@ body.dark-mode .store-btn {
     font-family: var(--font-texto);
 }
 
-/* Imagen del móvil */
 .mobile-image {
     flex: 1;
     display: flex;
@@ -481,8 +489,7 @@ body.dark-mode .store-btn {
     transform: rotate(0deg);
 }
 
-
-/* --- Equipo --- */
+/* Equipo */
 .team-header {
     text-align: center;
     margin-bottom: 50px;
@@ -660,6 +667,11 @@ body.dark-mode .team-header p {
     font-size: 18px;
     cursor: pointer;
     margin-top: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.btn-secondary:hover {
+    background-color: var(--color-principal);
+    color: white;
 }
 
 /* Testimonios */
@@ -792,6 +804,7 @@ body.dark-mode .team-header p {
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
+    transition: background-color 0.3s;
 }
 
 /* Footer */
@@ -812,6 +825,26 @@ footer {
     color: white;
     margin: 0 10px;
     text-decoration: none;
+}
+
+/* Footer Contact */
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+}
+
+.contact-icon {
+    font-size: 18px;
 }
 
 /* Responsive */
@@ -836,13 +869,19 @@ footer {
         display: flex;
     }
 
+    /* Ajuste para los botones en móvil: centrados y en columna o fila centrada */
+    .nav-actions-container {
+        margin-left: 0;
+        margin-top: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
     .hamburger {
         display: flex;
     }
 
-    .actions {
-        display: none;
-    }
+    /* Ocultamos .actions original si existiera, pero ya la movimos */
 
     .container-inicio {
         flex-direction: column-reverse;
@@ -857,7 +896,6 @@ footer {
         flex-direction: column;
     }
 
-    /* Mobile Experience Responsive */
     .container-mobile {
         flex-direction: column;
         text-align: center;
@@ -870,7 +908,6 @@ footer {
         justify-content: center;
     }
 
-    /* Equipo Responsive */
     .team-grid {
         flex-direction: column;
         align-items: center;
