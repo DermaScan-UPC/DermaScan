@@ -37,7 +37,6 @@ const translations = {
         feature3_desc: "Evalúa la severidad de tu acné y obtén consejos para su tratamiento.",
         gallery_title: "Interfaz Intuitiva",
 
-        // TEAM TRANSLATIONS
         team_section_tag: "ACERCA DE NOSOTROS",
         team_main_title: "Nuestro equipo",
         team_desc: "Seis aliados fundamentales que funcionan para el impulso de DermaScan",
@@ -47,12 +46,10 @@ const translations = {
         endorsement_iso: "ISO 27001",
         endorsement_hippa: "HIPPA Compliant",
 
-        // MOBILE SECTION TRANSLATIONS
         mobile_title: "TU NUEVA\nEXPERIENCIA\nMÓVIL",
         mobile_desc: "Descubre todo lo que ofrece la nueva herramienta móvil que ofrece DermaScan.",
         btn_store_sub: "Descarga la aplicación en",
 
-        // COMPARISON TABLE TRANSLATIONS
         comparison_title: "¿Por qué DermaScan?",
         comp_feature: "Característica",
         comp_others: "Otros",
@@ -67,7 +64,6 @@ const translations = {
         derma_desc: "Optimice su práctica clínica con nuestras herramientas de triaje y seguimiento.",
         btn_derma: "Soy Dermatólogo",
 
-        // TESTIMONIALS TRANSLATIONS
         testimonials_title: "TESTIMONIOS",
         testimonials_subtitle: "Vea que nuestros usuarios dicen de nosotros.",
         test1_name: "Sofía García",
@@ -103,8 +99,13 @@ const translations = {
         link_privacy: "Política de Privacidad",
         link_terms: "Términos y Condiciones",
 
-        // FOOTER
-        footer_copyright: "&copy; 2025 DermaScan. Todos los derechos reservados."
+        footer_copyright: "&copy; 2025 DermaScan. Todos los derechos reservados.",
+        btn_sending: "Enviando...",
+        btn_sent: "¡Enviado!",
+
+        // PLACEHOLDERS (NUEVO)
+        placeholder_email: "Tu email para Early Access",
+        placeholder_search: "Buscar pregunta..."
     },
     en: {
         nav_home: "Home",
@@ -143,7 +144,6 @@ const translations = {
         feature3_desc: "Assess the severity of your acne and get treatment advice.",
         gallery_title: "Intuitive Interface",
 
-        // TEAM TRANSLATIONS
         team_section_tag: "ABOUT US",
         team_main_title: "Our Team",
         team_desc: "Six fundamental allies working to boost DermaScan",
@@ -153,12 +153,10 @@ const translations = {
         endorsement_iso: "ISO 27001",
         endorsement_hippa: "HIPPA Compliant",
 
-        // MOBILE SECTION TRANSLATIONS
         mobile_title: "YOUR NEW\nMOBILE\nEXPERIENCE",
         mobile_desc: "Discover everything the new mobile tool by DermaScan offers.",
         btn_store_sub: "Download on the",
 
-        // COMPARISON TABLE TRANSLATIONS
         comparison_title: "Why DermaScan?",
         comp_feature: "Feature",
         comp_others: "Others",
@@ -173,7 +171,6 @@ const translations = {
         derma_desc: "Optimize your clinical practice with our triage and tracking tools.",
         btn_derma: "I am a Dermatologist",
 
-        // TESTIMONIALS TRANSLATIONS
         testimonials_title: "TESTIMONIALS",
         testimonials_subtitle: "See what our users say about us.",
         test1_name: "Sofía García",
@@ -209,8 +206,13 @@ const translations = {
         link_privacy: "Privacy Policy",
         link_terms: "Terms and Conditions",
 
-        // FOOTER
-        footer_copyright: "&copy; 2025 DermaScan. All rights reserved."
+        footer_copyright: "&copy; 2025 DermaScan. All rights reserved.",
+        btn_sending: "Sending...",
+        btn_sent: "Sent!",
+
+        // PLACEHOLDERS (NUEVO)
+        placeholder_email: "Your email for Early Access",
+        placeholder_search: "Search question..."
     }
 };
 
@@ -230,10 +232,11 @@ const faqSearch = document.getElementById('faq-search');
 
 function updateLanguage() {
     const texts = translations[currentLang];
+
+    // Update texts (innerText)
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         if (texts[key]) {
-            // Check for line breaks
             if (key === 'mobile_title') {
                 element.innerHTML = texts[key].replace(/\n/g, '<br>');
             } else if (key === 'footer_copyright') {
@@ -243,6 +246,15 @@ function updateLanguage() {
             }
         }
     });
+
+    // CAMBIO: Actualizar placeholders
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-i18n-placeholder');
+        if (texts[key]) {
+            element.setAttribute('placeholder', texts[key]);
+        }
+    });
+
     langToggle.innerText = currentLang === 'es' ? 'EN' : 'ES';
 }
 
@@ -285,9 +297,8 @@ window.addEventListener('load', () => {
         setTimeout(() => {
             loader.style.display = 'none';
         }, 500);
-    }, 1000); // Fake delay for demo
+    }, 1000);
 
-    // Load saved theme
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         isDarkMode = true;
@@ -318,3 +329,36 @@ function changeActiveLink() {
 }
 
 window.addEventListener('scroll', changeActiveLink);
+
+// Form Feedback Logic
+document.querySelectorAll('form').forEach(form => {
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const btn = form.querySelector('button[type="submit"]');
+        if(!btn) return;
+
+        const originalKey = btn.getAttribute('data-i18n');
+
+        btn.disabled = true;
+        btn.classList.add('btn-loading');
+        btn.innerText = translations[currentLang]['btn_sending'];
+
+        setTimeout(() => {
+            btn.classList.remove('btn-loading');
+            btn.classList.add('btn-success');
+            btn.innerText = translations[currentLang]['btn_sent'];
+
+            form.reset();
+
+            setTimeout(() => {
+                btn.classList.remove('btn-success');
+                btn.disabled = false;
+                if (originalKey && translations[currentLang][originalKey]) {
+                    btn.innerText = translations[currentLang][originalKey];
+                }
+            }, 3000);
+
+        }, 1500);
+    });
+});

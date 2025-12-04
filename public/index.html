@@ -36,13 +36,13 @@
             <li><a href="#testimonios" data-i18n="nav_testimonials">Testimonios</a></li>
             <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
             <li><a href="#contacto" data-i18n="nav_contact">Contacto</a></li>
-        </ul>
 
-        <div class="actions">
-            <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
-            <button id="lang-toggle" aria-label="Toggle Language">EN</button>
-            <a href="#descarga" class="btn-download" data-i18n="btn_download">Descargar App</a>
-        </div>
+            <li class="nav-actions-container">
+                <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+                <button id="lang-toggle" aria-label="Toggle Language">EN</button>
+                <a href="#descarga" class="btn-download" data-i18n="btn_download">Descargar App</a>
+            </li>
+        </ul>
 
         <div class="hamburger">
             <span></span>
@@ -60,7 +60,7 @@
                 manteniendo un registro de tus resultados y conectándote con especialistas cuando lo necesites.</p>
             <div class="hero-cta">
                 <form class="early-access-form" id="early-access">
-                    <input type="email" placeholder="Tu email para Early Access" required>
+                    <input type="email" placeholder="Tu email para Early Access" required data-i18n-placeholder="placeholder_email">
                     <button type="submit" data-i18n="btn_early_access">Unirme</button>
                 </form>
             </div>
@@ -397,7 +397,7 @@
 <section class="faq" id="faq">
     <div class="container">
         <h2 data-i18n="faq_title">Preguntas Frecuentes</h2>
-        <input type="text" id="faq-search" placeholder="Buscar pregunta..." class="faq-search">
+        <input type="text" id="faq-search" placeholder="Buscar pregunta..." class="faq-search" data-i18n-placeholder="placeholder_search">
         <div class="faq-list">
             <details>
                 <summary data-i18n="faq_q1">¿Es gratuito?</summary>
@@ -471,11 +471,23 @@
             <a href="#">Facebook</a>
             <a href="#">Twitter</a>
         </div>
+
+        <div class="footer-contact">
+            <div class="contact-item">
+                <span class="contact-icon">📞</span>
+                <span>995626333</span>
+            </div>
+            <div class="contact-item">
+                <span class="contact-icon">✉️</span>
+                <span>dermascan@gmail.com</span>
+            </div>
+        </div>
+
         <div class="legal">
             <a href="#" data-i18n="link_privacy">Política de Privacidad</a>
             <a href="#" data-i18n="link_terms">Términos y Condiciones</a>
         </div>
-        <p data-i18n="footer_copyright">&copy; 2025 DermaScan. All rights reserved.</p>
+        <p data-i18n="footer_copyright">&copy; 2025 DermaScan. Todos los derechos reservados.</p>
     </div>
 </footer>
 
