@@ -1,4 +1,6 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,370 +9,477 @@
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="manifest" href="favicon/site.webmanifest.json">
 </head>
+
 <body>
-<!-- top header -->
+<div id="loader" class="loader-container">
+    <div class="spinner"></div>
+</div>
+
+<div class="chat-widget">
+    <button id="chat-btn" aria-label="Chat">💬</button>
+</div>
+
 <nav class="top-header">
     <a href="#" class="logo">
-        <img src="assets/images/logo2.png" alt="Logo de Dermascan">
+        <img src="assets/images/logo.png" alt="Logo de Dermascan">
     </a>
-    <ul class="nav-links">
-        <li><a href="#inicio" class="active">Inicio</a></li>
-        <li><a href="#beneficios">Beneficios</a></li>
-        <li><a href="#funcionalidades">Funcionalidades</a></li>
-        <li><a href="#testimonios">Testimonios</a></li>
-        <li><a href="#acerca-de-nosotros">Acerca de nosotros</a></li>
-        <li><a href="#nueva-experiencia-movil">Nueva Experiencia Móvil</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-    </ul>
+
     <div class="nav-controls">
-        <button class="theme-toggle" title="Cambiar tema">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-        </button>
-        <button class="language-toggle" title="Cambiar idioma">
-            <img src="assets/images/flag-uk.png" alt="English" style="width: 24px; height: 24px;">
-        </button>
-        <a href="#nueva-experiencia-movil" class="nav-button">Descargar App</a>
+        <ul class="nav-links">
+            <li><a href="#inicio" data-i18n="nav_home">Inicio</a></li>
+            <li><a href="#como-funciona" data-i18n="nav_how">Cómo Funciona</a></li>
+            <li><a href="#beneficios" data-i18n="nav_benefits">Beneficios</a></li>
+            <li><a href="#funcionalidades" data-i18n="nav_features">Funcionalidades</a></li>
+            <li><a href="#equipo" data-i18n="nav_team">Equipo</a></li>
+            <li><a href="#testimonios" data-i18n="nav_testimonials">Testimonios</a></li>
+            <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
+            <li><a href="#contacto" data-i18n="nav_contact">Contacto</a></li>
+        </ul>
+
+        <div class="actions">
+            <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+            <button id="lang-toggle" aria-label="Toggle Language">EN</button>
+            <a href="#descarga" class="btn-download" data-i18n="btn_download">Descargar App</a>
+        </div>
+
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
 </nav>
 
-
-    <!-- Sección Inicio -->
-    <section class="inicio" id="inicio">
-        <div class="container-inicio">
-            <div class="texto-inicio">
-                <h1>CUIDA TU PIEL A TIEMPO, CON CONFIENZA Y PRECISIÓN</h1>
-                <p>DermaScan te ayuda a monitorear tu piel de forma simple y confiable, manteniendo un registro de tus resultados y conectándote con especialistas cuando lo necesites.</p>
-            </div>
-            <div class="imagen-inicio">
-                <img src="assets/images/imgInicio.png" alt="">
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Beneficios-->
-    <section class="beneficios" id="beneficios">
-        <div class="container-beneficios">
-            <h2>BENEFICIOS DE DERMASCAN</h2>
-            <div class="lista-beneficios">
-                <div class="beneficio1">
-                    <img src="assets/images/beneficiosIcon1.png" alt="">
-                    <h3>Detección temprana</h3>
-                    <p>Identifica posibles anomalías en tu piel en etapas iniciales, permitiendo un tratamiento oportuno.</p>
-                </div>
-                <div class="beneficio2">
-                    <img src="assets/images/beneficiosIcon2.png" alt="">
-                    <h3>Resultados Rápidos</h3>
-                    <p>Obtén resultados en minutos, sin necesidad de citas médicas ni largas esperas.</p>
-                </div>
-                <div class="beneficio3">
-                    <img src="assets/images/beneficiosIcon3.png" alt="">
-                    <h3>Privacidad Garantizada</h3>
-                    <p>Tus datos e imágenes se mantienen confidenciales y protegidos en todo momento.</p>
-                </div>
+<section class="inicio" id="inicio">
+    <div class="container-inicio">
+        <div class="texto-inicio">
+            <h1 data-i18n="hero_title">CUIDA TU PIEL A TIEMPO, CON CONFIANZA Y PRECISIÓN</h1>
+            <p data-i18n="hero_desc">DermaScan te ayuda a monitorear tu piel de forma simple y confiable,
+                manteniendo un registro de tus resultados y conectándote con especialistas cuando lo necesites.</p>
+            <div class="hero-cta">
+                <form class="early-access-form" id="early-access">
+                    <input type="email" placeholder="Tu email para Early Access" required>
+                    <button type="submit" data-i18n="btn_early_access">Unirme</button>
+                </form>
             </div>
         </div>
-    </section>
+        <div class="imagen-inicio">
+            <img src="assets/images/imgInicio.png" alt="DermaScan App Preview">
+        </div>
+    </div>
+</section>
 
-    <!-- Sección Funcionalidades -->
-    <section class="funcionalidades" id="funcionalidades">
-        <div class="container-funcionalidades">
-            <h2>FUNCIONALIDADES DE DERMASCAN</h2>
-            <p>DermaScan ofrece una variedad de herramientas para el cuidado de tu piel.</p>
-            <div class="lista-funcionalidades">
-                <div class="funcionalidad1">
-                    <img src="assets/images/funcionalidades1.png" alt="">
-                    <h3>Análisis de lunares</h3>
-                    <p>Examina tus lunares para detectar cambios sospechosos y recibir recomendaciones personalizadas.</p>
-                </div>
-                <div class="funcionalidad2">
-                    <img src="assets/images/funcionalidades2.png" alt="">
-                    <h3>Seguimiento de manchas</h3>
-                    <p>Monitorea la evolución de manchas en tu piel a 10 largo del tiempo.</p>
-                </div>
-                <div class="funcionalidad3">
-                    <img src="assets/images/funcionalidades3.png" alt="">
-                    <h3>Control de ácne</h3>
-                    <p>Evalúa la severidad de tu acné y obtén consejos para su tratamiento.</p>
-                </div>
+<section class="como-funciona" id="como-funciona">
+    <div class="container">
+        <h2 data-i18n="how_title">¿CÓMO FUNCIONA?</h2>
+        <div class="steps-grid">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3 data-i18n="step1_title">Escanea</h3>
+                <p data-i18n="step1_desc">Toma una foto de tu piel con nuestra cámara inteligente.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3 data-i18n="step2_title">Analiza</h3>
+                <p data-i18n="step2_desc">Nuestra IA procesa la imagen en segundos.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3 data-i18n="step3_title">Recibe</h3>
+                <p data-i18n="step3_desc">Obtén un pre-diagnóstico y recomendaciones.</p>
             </div>
         </div>
-    </section>
 
-    <!-- Sección Testimonios -->
-    <section class="testimonios" id="testimonios">
-        <div class="container-testimonios">
-            <h2>TESTIMONIOS</h2>
-            <p>Vea lo que nuestros usuarios dicen de nosotros.</p>
-            <div class="lista-testimonios">
-                <div class="testimonio">
-                    <div class="testimonio-header">
-                        <img src="assets/images/testimonio1.png" alt="Sofía García" class="avatar">
-                        <div class="testimonio-info">
-                            <h3>Sofía García</h3>
-                            <h4>hace 2 semanas</h4>
-                        </div>
-                    </div>
-                    <p>"DermaScan me ayudó a detectar un lunar sospechoso que resultó ser un melanoma en etapa temprana. Gracias a la app, pude recibir tratamiento a tiempo y salvar mi vida."</p>
-                </div>
-                <div class="testimonio">
-                    <div class="testimonio-header">
-                        <img src="assets/images/testimonio2.png" alt="Carlos Lopez" class="avatar">
-                        <div class="testimonio-info">
-                            <h3>Carlos Lopez</h3>
-                            <h4>hace 1 mes</h4>
-                        </div>
-                    </div>
-                    <p>"La app es muy fácil de usar y los resultados son rápidos. Me ha ayudado a controlar mi acné y mejorar mi piel."</p>
-                </div>
-                <div class="testimonio">
-                    <div class="testimonio-header">
-                        <img src="assets/images/testimonio3.png" alt="Ana Martinez" class="avatar">
-                        <div class="testimonio-info">
-                            <h3>Ana Martinez</h3>
-                            <h4>hace 3 meses</h4>
-                        </div>
-                    </div>
-                    <p>"DermaScan es una herramienta indispensable para el cuidado de la piel. Me permite monitorear mis manchas y lunares de forma regular y estar tranquila."</p>
-                </div>
+        <div class="video-placeholder" style="background: transparent; height: auto; display: block;">
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px;">
+                <iframe
+                        src="https://www.youtube.com/embed/GUChgK-fPYk"
+                        title="Video Explicativo DermaScan"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
             </div>
         </div>
-    </section>
 
-    <!-- Sección Acerca de Nosotros -->
-    <section class="acerca-de-nosotros" id="acerca-de-nosotros">
-        <div class="container-acerca-de-nosotros">
-            <h2>ACERCA DE NOSOTROS</h2>
-            <h3>Nuestro equipo</h3>
-            <p>Seis aliados fundamentales que funcionan para el impulso de Dermascan</p>
-            <div class="lista-equipo">
-                <div class="miembro-equipo">
-                    <img src="assets/images/ayrton.jpg" alt="Briceño Llanos, Ayrton" class="foto-equipo">
-                    <h4>Briceño Llanos, Ayrton</h4>
-                    <p class="especialidad">Ingeniería de Software</p>
-                    <div class="social-links">
-                        <a href="#" title="Facebook">
-                            <img src="assets/images/facebook.png" alt="" width="20" height="20">
-                        </a>
-                        <a href="#" title="Twitter">
-                            <img src="assets/images/twitter.png" alt="" width="20" height="20">
-                        </a>
-                        <a href="#" title="Instagram">
-                            <img src="assets/images/instagram.png" alt="" width="20" height="20">
-                        </a>
-                    </div>
-                </div>
-                <div class="miembro-equipo">
-                    <img src="assets/images/santiago.jpg" alt="Antúnez Mendoza, Santiago" class="foto-equipo">
-                    <h4>Antúnez Mendoza, Santiago</h4>
-                    <p class="especialidad">Ingeniería de Sistemas</p>
-                    <div class="social-links">
-                        <a href="#" title="Facebook">
-                            <img src="assets/images/facebook.png" alt="" width="20" height="20">
-                        </a>
-                        <a href="#" title="Twitter">
-                            <img src="assets/images/twitter.png" alt="" width="20" height="20">
-                        </a>
-                        <a href="#" title="Instagram">
-                            <img src="assets/images/instagram.png" alt="" width="20" height="20">
-                        </a>
-                    </div>
-                </div>
-                <div class="miembro-equipo">
-                    <img src="assets/images/fernando.jpg" alt="Casallo Mamani, Fernando" class="foto-equipo">
-                    <h4>Casallo Mamani, Fernando</h4>
-                    <p class="especialidad">Ingeniería de Sistemas</p>
-                    <div class="social-links">
-                        <a href="#" title="Facebook">
-                            <img src="assets/images/facebook.png" alt="" width="20" height="20">
-                        </a>
-                        <a href="#" title="Twitter">
-                            <img src="assets/images/twitter.png" alt="" width="20" height="20">
-                        </a>
-                        <a href="#" title="Instagram">
-                            <img src="assets/images/instagram.png" alt="" width="20" height="20">
-                        </a>
-                    </div>
-                </div>
-                <div class="miembro-equipo">
-                    <img src="assets/images/josé.jpg" alt="Cueto Mendez, José" class="foto-equipo">
-                    <h4>Cueto Mendez, José</h4>
-                    <p class="especialidad">Ingeniería de Software</p>
-                    <div class="social-links">
-                        <a href="#" title="Facebook">
-                            <img src="assets/images/facebook.png" alt="" width="20" height="20">
-                        </a>
-                        <a href="#" title="Twitter">
-                            <img src="assets/images/twitter.png" alt="" width="20" height="20">
-                        </a>
-                        <a href="#" title="Instagram">
-                            <img src="assets/images/instagram.png" alt="" width="20" height="20">
-                        </a>
-                    </div>
-                </div>
-                <div class="miembro-equipo">
-                    <img src="assets/images/luis.jpg" alt="Yuryilca Rivera, Luis" class="foto-equipo">
-                    <h4>Yuryilca Rivera, Luis</h4>
-                    <p class="especialidad">Ingeniería de Sistemas</p>
-                    <div class="social-links">
-                        <a href="#" title="Facebook">
-                            <img src="assets/images/facebook.png" alt="" width="20" height="20">
-                        </a>
-                        <a href="#" title="Twitter">
-                            <img src="assets/images/twitter.png" alt="" width="20" height="20">
-                        </a>
-                        <a href="#" title="Instagram">
-                            <img src="assets/images/instagram.png" alt="" width="20" height="20">
-                        </a>
-                    </div>
-                </div>
-                <div class="miembro-equipo">
-                    <img src="assets/images/gabriela.jpg" alt="Gonzales Estrada, Gabriela" class="foto-equipo">
-                    <h4>Gonzales Estrada, Gabriela</h4>
-                    <p class="especialidad">Ingeniería de Sistemas</p>
-                    <div class="social-links">
-                        <a href="#" title="Facebook">
-                            <img src="assets/images/facebook.png" alt="" width="20" height="20">
-                        </a>
-                        <a href="#" title="Twitter">
-                            <img src="assets/images/twitter.png" alt="" width="20" height="20">
-                        </a>
-                        <a href="#" title="Instagram">
-                            <img src="assets/images/instagram.png" alt="" width="20" height="20">
-                        </a>
-                    </div>
-                </div>
+    </div>
+</section>
+
+<section class="beneficios" id="beneficios">
+    <div class="container-beneficios">
+        <h2 data-i18n="benefits_title">BENEFICIOS DE DERMASCAN</h2>
+        <div class="lista-beneficios">
+            <div class="beneficio1">
+                <img src="assets/images/beneficiosIcon1.png" alt="">
+                <h3 data-i18n="benefit1_title">Detección temprana</h3>
+                <p data-i18n="benefit1_desc">Identifica posibles anomalías en tu piel en etapas iniciales,
+                    permitiendo un tratamiento oportuno.</p>
+            </div>
+            <div class="beneficio2">
+                <img src="assets/images/beneficiosIcon2.png" alt="">
+                <h3 data-i18n="benefit2_title">Resultados Rápidos</h3>
+                <p data-i18n="benefit2_desc">Obtén resultados en minutos, sin necesidad de citas médicas ni largas
+                    esperas.</p>
+            </div>
+            <div class="beneficio3">
+                <img src="assets/images/beneficiosIcon3.png" alt="">
+                <h3 data-i18n="benefit3_title">Privacidad Garantizada</h3>
+                <p data-i18n="benefit3_desc">Tus datos e imágenes se mantienen confidenciales y protegidos en todo
+                    momento.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Sección Tu Nueva Experiencia Móvil -->
-    <section class="nueva-experiencia-movil" id="nueva-experiencia-movil">
-        <div class="container-nueva-experiencia">
-            <div class="contenido-experiencia">
-                <h2>TU NUEVA<br>EXPERIENCIA<br>MÓVIL</h2>
-                <p>Descubre todo lo que ofrece la nueva herramienta móvil que ofrece Dermascan.</p>
-                <div class="botones-descarga">
-                    <a href="#" class="btn-app-store">
-                        <img src="assets/images/simple-icons_appstore.png" alt="Logo App Store" class="logo-app-store">
-                        <div class="btn-texto">
-                            <span class="texto-pequeno">Descarga la aplicación en</span>
-                            <span class="texto-grande">App Store</span>
-                        </div>
-                    </a>
- 
-                    <a href="#" class="btn-google-play">
-                        <img src="assets/images/mage_playstore.png" alt="Logo Google Play" class="logo-google-play">
-                        <div class="btn-texto">
-                            <span class="texto-pequeno">Descarga la aplicación en</span>
-                            <span class="texto-grande">Google Play</span>
-                        </div>
-                    </a>
-                </div>
+<section class="funcionalidades" id="funcionalidades">
+    <div class="container-funcionalidades">
+        <h2 data-i18n="features_title">FUNCIONALIDADES DE DERMASCAN</h2>
+        <p data-i18n="features_subtitle">DermaScan ofrece una variedad de herramientas para el cuidado de tu piel.
+        </p>
+        <div class="lista-funcionalidades">
+            <div class="funcionalidad1">
+                <img src="assets/images/funcionalidades1.png" alt="">
+                <h3 data-i18n="feature1_title">Análisis de lunares</h3>
+                <p data-i18n="feature1_desc">Examina tus lunares para detectar cambios sospechosos y recibir
+                    recomendaciones personalizadas.</p>
             </div>
-            <div class="imagen-experiencia">
-                <img src="assets/images/androidiOS.jpg" alt="Mockup de teléfonos con la app DermaScan">
+            <div class="funcionalidad2">
+                <img src="assets/images/funcionalidades2.png" alt="">
+                <h3 data-i18n="feature2_title">Seguimiento de manchas</h3>
+                <p data-i18n="feature2_desc">Monitorea la evolución de manchas en tu piel a lo largo del tiempo.</p>
+            </div>
+            <div class="funcionalidad3">
+                <img src="assets/images/funcionalidades3.png" alt="">
+                <h3 data-i18n="feature3_title">Control de acné</h3>
+                <p data-i18n="feature3_desc">Evalúa la severidad de tu acné y obtén consejos para su tratamiento.
+                </p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Sección Contacto -->
-    <section class="contacto" id="contacto">
-        <div class="container-contacto">
-            <h2>CONTÁCTANOS</h2>
-            <div class="contacto-contenido">
-                <div class="contacto-imagen">
-                    <img src="assets/images/contacto.png" alt="Doctora en contacto">    
-                </div>
-                <div class="contacto-formulario">
-                    <form action="#">
-                        <div class="form-group">
-                            <label for="nombre">Nombre Completo:</label>
-                            <input type="text" id="nombre" name="nombre_completo" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required>
-                        </div> 
-                        <div class="form-group">
-                            <label for="mensaje">Mensaje:</label>
-                            <textarea id="mensaje" name="mensaje" rows="6"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn-enviar">Enviar Mensaje</button>
-                        </div>
-                    </form>
-                </div>
+<section class="galeria">
+    <div class="container">
+        <h2 data-i18n="gallery_title">Interfaz Intuitiva</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="assets/images/demostracion1.png" alt="Demostración de la App 1" class="app-screenshot">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/demostracion2.png" alt="Demostración de la App 2" class="app-screenshot">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/demostracion3.png" alt="Demostración de la App 3" class="app-screenshot">
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!--Footer-->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-top">
-                <!-- Compañía Section -->
-                <div class="footer-column">
-                    <h3>Compañía</h3>
-                    <ul>
-                        <li><a href="#nosotros">Nosotros</a></li>
-                        <li><a href="#product">Product</a></li>
-                        <li><a href="#privacidad">Política de privacidad</a></li>
-                        <li><a href="#instituciones">Instituciones afiliadas</a></li>
-                    </ul>
+<section class="comparativa">
+    <div class="container">
+        <h2 data-i18n="comparison_title">¿Por qué DermaScan?</h2>
+        <div class="table-responsive">
+            <table class="comparison-table">
+                <thead>
+                <tr>
+                    <th data-i18n="comp_feature">Característica</th>
+                    <th class="highlight">DermaScan</th>
+                    <th data-i18n="comp_others">Otros</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td data-i18n="comp_row1">Análisis IA</td>
+                    <td>✅</td>
+                    <td>❌</td>
+                </tr>
+                <tr>
+                    <td data-i18n="comp_row2">Velocidad</td>
+                    <td>&lt; 30s</td>
+                    <td data-i18n="comp_days">Días</td>
+                </tr>
+                <tr>
+                    <td data-i18n="comp_row3">Privacidad</td>
+                    <td data-i18n="comp_encrypted">Encriptado</td>
+                    <td data-i18n="comp_variable">Variable</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section class="mobile-experience" id="descarga">
+    <div class="container container-mobile">
+        <div class="mobile-text">
+            <h2 data-i18n="mobile_title">TU NUEVA<br>EXPERIENCIA<br>MÓVIL</h2>
+            <div class="divider"></div>
+            <p data-i18n="mobile_desc">Descubre todo lo que ofrece la nueva herramienta móvil que ofrece DermaScan.</p>
+
+            <div class="store-buttons">
+                <a href="#" class="store-btn">
+                    <img src="assets/images/simple-icons_appstore.png" alt="Apple Logo" class="btn-icon">
+                    <div class="btn-content">
+                        <span class="btn-small" data-i18n="btn_store_sub">Descarga la aplicación en</span>
+                        <span class="btn-large">App Store</span>
+                    </div>
+                </a>
+
+                <a href="#" class="store-btn">
+                    <img src="assets/images/mage_playstore.png" alt="Play Store Logo" class="btn-icon">
+                    <div class="btn-content">
+                        <span class="btn-small" data-i18n="btn_store_sub">Descarga la aplicación en</span>
+                        <span class="btn-large">Google Play</span>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+        <div class="mobile-image">
+            <img src="assets/images/androidiOS.jpg" alt="DermaScan Mobile Experience">
+        </div>
+    </div>
+</section>
+
+<section class="equipo" id="equipo">
+    <div class="container">
+        <div class="team-header">
+            <h4 class="section-tag" data-i18n="team_section_tag">ACERCA DE NOSOTROS</h4>
+            <h2 data-i18n="team_main_title">Nuestro equipo</h2>
+            <p data-i18n="team_desc">Seis aliados fundamentales que funcionan para el impulso de DermaScan</p>
+        </div>
+
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="card-image">
+                    <img src="assets/images/ayrton.jpg" alt="Briceño Llanos, Ayrton">
                 </div>
-
-                <!-- Ayuda Section -->
-                <div class="footer-column">
-                    <h3>Ayuda</h3>
-                    <ul>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#progreso">Progreso</a></li>
-                        <li><a href="#asesores">Asesores</a></li>
-                        <li><a href="#pago">Opciones de pago</a></li>
-                    </ul>
-                </div>
-
-                <!-- Comunidad Section -->
-                <div class="footer-column">
-                    <h3>Comunidad</h3>
-                    <ul>
-                        <li><a href="#historia">Nuestra historia</a></li>
-                        <li><a href="#desarrolladores">Desarrolladores</a></li>
-                        <li><a href="#eventos">Eventos</a></li>
-                    </ul>
-                </div>
-
-                <!-- Síguenos Section -->
-                <div class="footer-column">
-                    <h3>Síguenos</h3>
-                    <div class="social-icons flex-center">
-                        <a href="#facebook" title="Facebook">
-                            <img src="assets/images/facebook-icon.jpg" alt="Facebook">
-                        </a>
-                        <a href="#twitter" title="Twitter">
-                            <img src="assets/images/twitter-icon.jpg" alt="Twitter">
-                        </a>
-                        <a href="#instagram" title="Instagram">
-                            <img src="assets/images/instagram-icon.jpg" alt="Instagram">
-                        </a>
-                        <a href="#youtube" title="YouTube">
-                            <img src="assets/images/youtube-icon.jpg" alt="YouTube">
-                        </a>
+                <div class="card-info">
+                    <h3>Briceño Llanos, Ayrton</h3>
+                    <p class="role" data-i18n="role_software">Ingeniería de Software</p>
+                    <div class="social-icons">
+                        <a href="#"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
                     </div>
                 </div>
             </div>
 
-            <!-- Footer Bottom -->
-            <div class="footer-bottom">
-                <div class="footer-brand">Dermascan</div>
-                <div class="footer-copyright">©2025 Dermascan. Todos los derechos reservados</div>
+            <div class="team-card">
+                <div class="card-image">
+                    <img src="assets/images/santiago.jpg" alt="Antúnez Mendoza, Santiago">
+                </div>
+                <div class="card-info">
+                    <h3>Antúnez Mendoza, Santiago</h3>
+                    <p class="role" data-i18n="role_systems">Ingeniería de Sistemas</p>
+                    <div class="social-icons">
+                        <a href="#"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="card-image">
+                    <img src="assets/images/fernando.jpg" alt="Casallo Mamani, Fernando">
+                </div>
+                <div class="card-info">
+                    <h3>Casallo Mamani, Fernando</h3>
+                    <p class="role" data-i18n="role_systems">Ingeniería de Sistemas</p>
+                    <div class="social-icons">
+                        <a href="#"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="card-image">
+                    <img src="assets/images/josé.jpg" alt="Cueto Mendez, José">
+                </div>
+                <div class="card-info">
+                    <h3>Cueto Mendez, José</h3>
+                    <p class="role" data-i18n="role_software">Ingeniería de Software</p>
+                    <div class="social-icons">
+                        <a href="#"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="card-image">
+                    <img src="assets/images/luis.jpg" alt="Yurivilca Rivera, Luis">
+                </div>
+                <div class="card-info">
+                    <h3>Yurivilca Rivera, Luis</h3>
+                    <p class="role" data-i18n="role_systems">Ingeniería de Sistemas</p>
+                    <div class="social-icons">
+                        <a href="#"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="card-image">
+                    <img src="assets/images/gabriela.jpg" alt="Gonzales Estrada, Gabriela">
+                </div>
+                <div class="card-info">
+                    <h3>Gonzales Estrada, Gabriela</h3>
+                    <p class="role" data-i18n="role_systems">Ingeniería de Sistemas</p>
+                    <div class="social-icons">
+                        <a href="#"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="avales-section">
+            <h3 data-i18n="avales_title">Nuestros Avales</h3>
+            <div class="certifications">
+                <span>🏆 <span data-i18n="endorsement_iso">ISO 27001</span></span>
+                <span>⚕️ <span data-i18n="endorsement_hippa">HIPPA Compliant</span></span>
             </div>
         </div>
-    </footer>
-    <script src="assets/scripts/main.js" defer></script>
+
+    </div>
+</section>
+
+<section class="dermatologos">
+    <div class="container">
+        <h2 data-i18n="derma_title">Para Profesionales</h2>
+        <p data-i18n="derma_desc">Optimice su práctica clínica con nuestras herramientas de triaje y seguimiento.
+        </p>
+        <button class="btn-secondary" data-i18n="btn_derma">Soy Dermatólogo</button>
+    </div>
+</section>
+
+<section class="testimonios" id="testimonios">
+    <div class="container-testimonios">
+        <h2 data-i18n="testimonials_title">TESTIMONIOS</h2>
+        <p data-i18n="testimonials_subtitle">Vea que nuestros usuarios dicen de nosotros.</p>
+        <div class="lista-testimonios">
+            <div class="testimonio1">
+                <img src="assets/images/testimonio1.png" alt="">
+                <h3 data-i18n="test1_name">Sofía García</h3>
+                <h4 data-i18n="test1_time">hace 2 semanas</h4>
+                <p data-i18n="test1_text">“DermaScan me ayudó a detectar un lunar sospechoso que resultó ser un melanoma en etapa temprana.
+                    Gracias a la app, pude recibir tratamiento a tiempo y salvar mi vida.”</p>
+            </div>
+            <div class="testimonio2">
+                <img src="assets/images/testimonio2.png" alt="">
+                <h3 data-i18n="test2_name">Carlos Lopez</h3>
+                <h4 data-i18n="test2_time">hace 1 mes</h4>
+                <p data-i18n="test2_text">"La app es muy fácil de usar y los resultados son rápidos. Me ha ayudado a controlar mi acné y
+                    mejorar mi piel."</p>
+            </div>
+            <div class="testimonio3">
+                <img src="assets/images/testimonio3.png" alt="">
+                <h3 data-i18n="test3_name">Ana Martinez</h3>
+                <h4 data-i18n="test3_time">hace 3 meses</h4>
+                <p data-i18n="test3_text">"DermaScan es una herramienta indispensable para el cuidado de la piel. Me permite monitorear mis
+                    manchas y lunares de forma regular y estar tranquila."</p>
+            </div>
+        </div>
+        <div class="doctor-testimonial">
+            <blockquote data-i18n="doc_quote">
+                "Una herramienta excelente para el triaje dermatológico."
+            </blockquote>
+            <cite data-i18n="doc_cite">- Dr. Juan Pérez, Dermatólogo Certificado</cite>
+        </div>
+    </div>
+</section>
+
+<section class="faq" id="faq">
+    <div class="container">
+        <h2 data-i18n="faq_title">Preguntas Frecuentes</h2>
+        <input type="text" id="faq-search" placeholder="Buscar pregunta..." class="faq-search">
+        <div class="faq-list">
+            <details>
+                <summary data-i18n="faq_q1">¿Es gratuito?</summary>
+                <p data-i18n="faq_a1">Sí, la versión básica es gratuita.</p>
+            </details>
+            <details>
+                <summary data-i18n="faq_q2">¿Sustituye al médico?</summary>
+                <p data-i18n="faq_a2">No, es una herramienta de apoyo y monitoreo.</p>
+            </details>
+            <details>
+                <summary data-i18n="faq_q3">¿Mis datos están seguros?</summary>
+                <p data-i18n="faq_a3">Sí, usamos encriptación de grado médico.</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<section class="blog">
+    <div class="container">
+        <h2 data-i18n="blog_title">Blog Saludable</h2>
+        <div class="blog-grid">
+            <article>
+                <h3 data-i18n="blog_post1">5 Tips para el verano</h3>
+                <a href="https://clinicainderma.com/piel-en-verano/" target="_blank" rel="noopener noreferrer" data-i18n="read_more">Leer más</a>
+            </article>
+            <article>
+                <h3 data-i18n="blog_post2">Entendiendo el SPF</h3>
+                <a href="https://www.garnier.es/consejos-belleza/proteccion-solar/significa-factor-proteccion-solar" target="_blank" rel="noopener noreferrer" data-i18n="read_more">Leer más</a>
+            </article>
+        </div>
+        <div class="newsletter">
+            <h3 data-i18n="newsletter_title">Suscríbete a nuestro Newsletter</h3>
+            <form>
+                <input type="email" placeholder="Email" required>
+                <button type="submit" data-i18n="btn_subscribe">Suscribirse</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="contacto" id="contacto">
+    <h2 data-i18n="contact_title">CONTÁCTANOS</h2>
+    <div class="container-contacto">
+        <img src="assets/images/contacto.png" alt="Contacto">
+        <div class="contact-form">
+            <form action="#">
+                <div class="form-group">
+                    <label for="nombre" data-i18n="lbl_name">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre_completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" data-i18n="lbl_email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje" data-i18n="lbl_message">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="6"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn-enviar" data-i18n="btn_send">Enviar Mensaje</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="socials">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+        </div>
+        <div class="legal">
+            <a href="#" data-i18n="link_privacy">Política de Privacidad</a>
+            <a href="#" data-i18n="link_terms">Términos y Condiciones</a>
+        </div>
+        <p data-i18n="footer_copyright">&copy; 2025 DermaScan. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="assets/scripts/main.js" defer></script>
 </body>
+
 </html>
