@@ -43,8 +43,8 @@ const translations = {
         role_software: "Ingeniería de Software",
         role_systems: "Ingeniería de Sistemas",
         avales_title: "Nuestros Avales",
-        endorsement_iso: "ISO 27001",
-        endorsement_hippa: "HIPPA Compliant",
+        // endorsement_iso & hippa REMOVIDOS (ahora son imágenes)
+        team_video_title: "Conoce a nuestro equipo", // NUEVO
 
         mobile_title: "TU NUEVA\nEXPERIENCIA\nMÓVIL",
         mobile_desc: "Descubre todo lo que ofrece la nueva herramienta móvil que ofrece DermaScan.",
@@ -103,7 +103,6 @@ const translations = {
         btn_sending: "Enviando...",
         btn_sent: "¡Enviado!",
 
-        // PLACEHOLDERS (NUEVO)
         placeholder_email: "Tu email para Early Access",
         placeholder_search: "Buscar pregunta..."
     },
@@ -150,8 +149,8 @@ const translations = {
         role_software: "Software Engineering",
         role_systems: "Systems Engineering",
         avales_title: "Our Endorsements",
-        endorsement_iso: "ISO 27001",
-        endorsement_hippa: "HIPPA Compliant",
+        // endorsement_iso & hippa REMOVED
+        team_video_title: "Meet our team", // NEW
 
         mobile_title: "YOUR NEW\nMOBILE\nEXPERIENCE",
         mobile_desc: "Discover everything the new mobile tool by DermaScan offers.",
@@ -210,17 +209,16 @@ const translations = {
         btn_sending: "Sending...",
         btn_sent: "Sent!",
 
-        // PLACEHOLDERS (NUEVO)
         placeholder_email: "Your email for Early Access",
         placeholder_search: "Search question..."
     }
 };
 
-// State
+// ... Rest of the code (State, Functions, Event Listeners) stays the same ...
+// You can include the previous JS logic here.
 let currentLang = 'es';
 let isDarkMode = false;
 
-// Elements
 const langToggle = document.getElementById('lang-toggle');
 const themeToggle = document.getElementById('theme-toggle');
 const hamburger = document.querySelector('.hamburger');
@@ -228,12 +226,9 @@ const navLinks = document.querySelector('.nav-links');
 const loader = document.getElementById('loader');
 const faqSearch = document.getElementById('faq-search');
 
-// Functions
-
 function updateLanguage() {
     const texts = translations[currentLang];
 
-    // Update texts (innerText)
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         if (texts[key]) {
@@ -247,7 +242,6 @@ function updateLanguage() {
         }
     });
 
-    // CAMBIO: Actualizar placeholders
     document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
         const key = element.getAttribute('data-i18n-placeholder');
         if (texts[key]) {
@@ -274,12 +268,10 @@ function toggleMenu() {
     navLinks.classList.toggle('active');
 }
 
-// Event Listeners
 langToggle.addEventListener('click', toggleLanguage);
 themeToggle.addEventListener('click', toggleTheme);
 hamburger.addEventListener('click', toggleMenu);
 
-// FAQ Search
 if (faqSearch) {
     faqSearch.addEventListener('input', (e) => {
         const term = e.target.value.toLowerCase();
@@ -290,7 +282,6 @@ if (faqSearch) {
     });
 }
 
-// Loader
 window.addEventListener('load', () => {
     setTimeout(() => {
         loader.style.opacity = '0';
@@ -307,7 +298,6 @@ window.addEventListener('load', () => {
     }
 });
 
-// Smooth Scroll & Active Link
 const sections = document.querySelectorAll('section[id]');
 const navItems = document.querySelectorAll('.nav-links li a');
 const navHeight = 100;
@@ -330,7 +320,6 @@ function changeActiveLink() {
 
 window.addEventListener('scroll', changeActiveLink);
 
-// Form Feedback Logic
 document.querySelectorAll('form').forEach(form => {
     form.addEventListener('submit', function(e) {
         e.preventDefault();

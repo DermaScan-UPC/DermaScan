@@ -27,7 +27,7 @@ body.dark-mode {
     --shadow-card: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* --- Scroll Suave Global --- */
+/* --- Global --- */
 html {
     scroll-behavior: smooth;
 }
@@ -45,7 +45,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Loader */
+/* --- Loader --- */
 .loader-container {
     position: fixed;
     top: 0;
@@ -74,7 +74,7 @@ body {
     100% { transform: rotate(360deg); }
 }
 
-/* Chat Widget */
+/* --- Chat Widget --- */
 .chat-widget {
     position: fixed;
     bottom: 20px;
@@ -99,7 +99,7 @@ body {
     transform: scale(1.1);
 }
 
-/* Navbar */
+/* --- Navbar --- */
 .top-header {
     display: flex;
     justify-content: space-between;
@@ -144,7 +144,6 @@ body {
     color: var(--color-principal);
 }
 
-/* Container for toggles & download btn inside nav-links */
 .nav-actions-container {
     display: flex;
     align-items: center;
@@ -152,7 +151,8 @@ body {
     margin-left: 10px;
 }
 
-.nav-actions-container button, .nav-actions-container .btn-download {
+.nav-actions-container button,
+.nav-actions-container .btn-download {
     background: none;
     border: 1px solid var(--color-texto-oscuro);
     color: var(--color-texto-oscuro);
@@ -185,7 +185,7 @@ body {
     background-color: var(--color-texto-oscuro);
 }
 
-/* Sections General */
+/* --- General Sections --- */
 section {
     padding: 80px 5%;
     scroll-margin-top: 80px;
@@ -199,7 +199,7 @@ h2 {
     text-align: center;
 }
 
-/* Inicio */
+/* --- Inicio --- */
 .container-inicio {
     display: flex;
     align-items: center;
@@ -262,12 +262,13 @@ h2 {
 .btn-success {
     background-color: #27AE60 !important;
 }
+
 .btn-loading {
     opacity: 0.7;
     cursor: wait !important;
 }
 
-/* Como Funciona */
+/* --- Como Funciona --- */
 .steps-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -300,7 +301,7 @@ h2 {
     color: #666;
 }
 
-/* Beneficios */
+/* --- Beneficios --- */
 .lista-beneficios {
     display: flex;
     gap: 30px;
@@ -308,7 +309,9 @@ h2 {
     flex-wrap: wrap;
 }
 
-.beneficio1, .beneficio2, .beneficio3 {
+.beneficio1,
+.beneficio2,
+.beneficio3 {
     flex: 1;
     min-width: 280px;
     padding: 30px;
@@ -318,12 +321,16 @@ h2 {
     background-color: var(--color-blanco);
 }
 
-.beneficio1, .beneficio3 {
+.beneficio1,
+.beneficio3 {
     background-color: var(--color-secundario);
     color: #333;
 }
 
-.beneficio1 h3, .beneficio3 h3, .beneficio1 p, .beneficio3 p {
+.beneficio1 h3,
+.beneficio3 h3,
+.beneficio1 p,
+.beneficio3 p {
     color: #333;
 }
 
@@ -332,7 +339,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Funcionalidades */
+/* --- Funcionalidades --- */
 .lista-funcionalidades {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -351,7 +358,7 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* Galería */
+/* --- Galería --- */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -370,7 +377,7 @@ h2 {
     width: 100%;
     height: auto;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease;
 }
 
@@ -378,7 +385,7 @@ h2 {
     transform: translateY(-5px);
 }
 
-/* Mobile Experience */
+/* --- Mobile Experience --- */
 .mobile-experience {
     background-color: var(--color-blanco);
 }
@@ -410,6 +417,7 @@ h2 {
     background-color: #000;
     margin-bottom: 20px;
 }
+
 body.dark-mode .divider {
     background-color: #fff;
 }
@@ -485,11 +493,12 @@ body.dark-mode .store-btn {
     transform: rotate(5deg);
     transition: transform 0.3s;
 }
+
 .mobile-image img:hover {
     transform: rotate(0deg);
 }
 
-/* Equipo */
+/* --- Equipo --- */
 .team-header {
     text-align: center;
     margin-bottom: 50px;
@@ -536,7 +545,7 @@ body.dark-mode .team-header p {
     border-radius: 15px;
     padding: 15px;
     width: 270px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -544,7 +553,7 @@ body.dark-mode .team-header p {
 
 .team-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .card-image {
@@ -610,7 +619,7 @@ body.dark-mode .team-header p {
     stroke-linejoin: round;
 }
 
-/* Avales Section */
+/* --- Avales Section --- */
 .avales-section {
     text-align: center;
     margin-top: 60px;
@@ -620,20 +629,37 @@ body.dark-mode .team-header p {
 
 .avales-section h3 {
     font-family: var(--font-titulo);
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     color: var(--color-texto-oscuro);
 }
 
-.certifications {
-    text-align: center;
-    font-size: 24px;
+.avales-grid {
     display: flex;
     justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
+    align-items: center;
 }
 
-/* Comparativa */
+.aval-img {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.aval-img:hover {
+    transform: scale(1.05);
+}
+
+/* --- Team Video Section --- */
+.team-video-section {
+    background-color: var(--color-fondo);
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+/* --- Comparativa --- */
 .comparison-table {
     width: 100%;
     border-collapse: collapse;
@@ -641,7 +667,8 @@ body.dark-mode .team-header p {
     max-width: 800px;
 }
 
-.comparison-table th, .comparison-table td {
+.comparison-table th,
+.comparison-table td {
     padding: 15px;
     border-bottom: 1px solid #ddd;
     text-align: center;
@@ -652,7 +679,7 @@ body.dark-mode .team-header p {
     color: white;
 }
 
-/* Dermatologos */
+/* --- Dermatologos --- */
 .dermatologos {
     background-color: var(--color-blanco);
     text-align: center;
@@ -669,19 +696,22 @@ body.dark-mode .team-header p {
     margin-top: 20px;
     transition: background-color 0.3s, color 0.3s;
 }
+
 .btn-secondary:hover {
     background-color: var(--color-principal);
     color: white;
 }
 
-/* Testimonios */
+/* --- Testimonios --- */
 .lista-testimonios {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
-.testimonio1, .testimonio2, .testimonio3 {
+.testimonio1,
+.testimonio2,
+.testimonio3 {
     background-color: var(--color-blanco);
     padding: 20px;
     border-radius: 10px;
@@ -695,7 +725,7 @@ body.dark-mode .team-header p {
     color: var(--color-principal);
 }
 
-/* FAQ */
+/* --- FAQ --- */
 .faq-search {
     width: 100%;
     max-width: 500px;
@@ -719,7 +749,7 @@ body.dark-mode .team-header p {
     font-weight: bold;
 }
 
-/* Blog */
+/* --- Blog --- */
 .blog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -766,7 +796,7 @@ body.dark-mode .team-header p {
     font-weight: bold;
 }
 
-/* Contacto */
+/* --- Contacto --- */
 .container-contacto {
     display: flex;
     gap: 40px;
@@ -789,7 +819,8 @@ body.dark-mode .team-header p {
     margin-bottom: 5px;
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
     width: 100%;
     padding: 10px;
     border-radius: 5px;
@@ -807,7 +838,7 @@ body.dark-mode .team-header p {
     transition: background-color 0.3s;
 }
 
-/* Footer */
+/* --- Footer --- */
 footer {
     background-color: #333;
     color: white;
@@ -821,13 +852,13 @@ footer {
     gap: 20px;
 }
 
-.socials a, .legal a {
+.socials a,
+.legal a {
     color: white;
     margin: 0 10px;
     text-decoration: none;
 }
 
-/* Footer Contact */
 .footer-contact {
     display: flex;
     flex-direction: column;
@@ -847,7 +878,7 @@ footer {
     font-size: 18px;
 }
 
-/* Responsive */
+/* --- Responsive Adjustments --- */
 @media (max-width: 768px) {
     .top-header {
         padding: 15px 20px;
@@ -862,14 +893,13 @@ footer {
         background-color: var(--color-nav-bg);
         flex-direction: column;
         padding: 20px;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     }
 
     .nav-links.active {
         display: flex;
     }
 
-    /* Ajuste para los botones en móvil: centrados y en columna o fila centrada */
     .nav-actions-container {
         margin-left: 0;
         margin-top: 20px;
@@ -880,8 +910,6 @@ footer {
     .hamburger {
         display: flex;
     }
-
-    /* Ocultamos .actions original si existiera, pero ya la movimos */
 
     .container-inicio {
         flex-direction: column-reverse;
@@ -900,10 +928,12 @@ footer {
         flex-direction: column;
         text-align: center;
     }
+
     .mobile-text h2 {
         text-align: center;
         font-size: 32px;
     }
+
     .store-buttons {
         justify-content: center;
     }
@@ -924,5 +954,10 @@ footer {
 
     .container-contacto img {
         max-width: 100%;
+    }
+
+    .avales-grid {
+        flex-direction: column;
+        gap: 20px;
     }
 }
